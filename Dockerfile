@@ -47,7 +47,7 @@ RUN mkdir -p $PROJECTOR_DIR
 # copy IDE:
 COPY --from=ideDownloader /ide $PROJECTOR_DIR/ide
 # copy projector files to the container:
-ADD projector-docker/static $PROJECTOR_DIR
+ADD static $PROJECTOR_DIR
 # copy projector:
 COPY --from=projectorGradleBuilder $PROJECTOR_DIR/projector-server/projector-server/build/distributions/projector-server-1.0-SNAPSHOT.zip $PROJECTOR_DIR
 # prepare IDE - apply projector-server:
